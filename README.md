@@ -23,15 +23,16 @@ GeoIK was built as a compact analytical alternative to iterative inverse kinemat
 ## Solver pipeline
 
 ```mermaid
-flowchart LR
-    A[Target position p = (x, y, z)] --> B[Base yaw theta1 = atan2(y, x)]
-    B --> C[Compute radial pitch and wrist center]
-    C --> D[Reachability test]
-    D --> E[Law of cosines for elbow]
-    E --> F[Shoulder angle from triangle geometry]
-    F --> G[Wrist pitch closure]
-    G --> H[Joint vector [theta1, theta2, theta3, 0, theta5, 0]]
-    H --> I[Optional FK / KDL verification]
+flowchart TD
+    A["Target position (x, y, z)"] --> B["Calculate base yaw"]
+    B --> C["Compute radial pitch and wrist centre"]
+    C --> D{"Target reachable?"}
+    D -->|No| E["Return no solution"]
+    D -->|Yes| F["Calculate elbow angle using cosine rule"]
+    F --> G["Calculate shoulder angle"]
+    G --> H["Calculate wrist pitch"]
+    H --> I["Return six joint angles"]
+    I --> J["Forward kinematics verification"]
 ```
 
 ## Simplified manipulator parameters
