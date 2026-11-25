@@ -116,6 +116,3 @@ The earlier timing comparison was useful, but not a perfectly matched-task bench
 - Historical KDL speedup claims should be re-validated under matched-task conditions.
 - This repository is intended as a **kinematics demonstration and benchmark artifact**, not a production manipulator controller.
 
-## Recommended public repo description
-
-> Closed-form geometric inverse kinematics for a simplified 6-DoF manipulator, with a public URDF model, analytical solver, and Orocos KDL comparison for Cartesian accuracy and speed.
