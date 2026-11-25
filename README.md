@@ -1,6 +1,6 @@
-# GeoIK
 
-A lightweight **closed-form geometric inverse kinematics** project for a simplified **6-DoF serial manipulator**, benchmarked against **Orocos KDL** for Cartesian position accuracy and computational latency.
+
+A **closed-form geometric inverse kinematics** project for a simplified **6-DoF serial manipulator**, benchmarked against **Orocos KDL** for Cartesian position accuracy and computational latency.
 
 This repository packages a public, simplified **horizontal-link manipulator model** (`gemini.urdf`) and the corresponding analytical IK solver. It is **not** a hardware control stack, and it is **not** a general arbitrary-pose 6-DoF solver. The analytical formulation assumes a constrained end-effector orientation policy with joints **J4 = 0** and **J6 = 0**, while solving for base yaw, shoulder, elbow, and wrist pitch.
 
