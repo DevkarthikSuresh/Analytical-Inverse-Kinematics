@@ -1,4 +1,4 @@
-
+# Analytical Inverse Kinematics Solver
 
 A **closed-form geometric inverse kinematics** project for a simplified **6-DoF serial manipulator**, benchmarked against **Orocos KDL** for Cartesian position accuracy and computational latency.
 
